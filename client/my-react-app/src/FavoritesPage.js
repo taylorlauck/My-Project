@@ -8,9 +8,10 @@ const FavoritesPage = () => {
   const handleUnfavorite = (artworkid) => {
     removeFromFavorites(artworkid); // Remove art from favorites using context action
   };
-
+  
   useEffect(() => {
     fetchFavorites(); // Fetch favorites when the component mounts
+  
   }, []); // Empty dependency array to execute once
 
   return (
