@@ -74,7 +74,7 @@ app.post("/adduser", async (req, res) => {
 
 
 
-// Endpoint for user login
+// Endpoint for user login yep
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
 

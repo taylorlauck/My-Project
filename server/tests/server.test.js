@@ -1,5 +1,5 @@
 const request = require('supertest'); // Replace import statement with require
-const app = require('../server'); // Adjust the path accordingly
+const app = require('../server'); // Adjust the path accordingly jd
 
 
 describe('Endpoint Tests', () => {
