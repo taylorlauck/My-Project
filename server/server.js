@@ -18,13 +18,16 @@ app.use(cors({
 }));
 
 // Your CORS configuration for handling OPTIONS requests
-app.options('*', cors());
-app.options('*', function(req, res) {
-  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.header('Access-Control-Allow-Credentials', true);
-  res.send(200);
+  if (req.method === 'OPTIONS') {
+      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+      return res.status(200).json({});
+  }
+  next();
 });
+
 
 
 // Middleware function for verifying JWT token
