@@ -11,7 +11,7 @@ const Login = ({ setIsLoggedIn }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/login', {
+      const response = await axios.post('http://art-visual-explorer.onrender.com/login', {
         username,
         password,
       });

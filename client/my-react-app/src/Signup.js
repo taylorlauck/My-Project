@@ -12,7 +12,7 @@ const Signup = ({ handleSignup }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/adduser', {
+      const response = await axios.post('http://art-visual-explorer.onrender.com/adduser', {
         username,
         password,
       });
