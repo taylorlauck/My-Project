@@ -17,6 +17,16 @@ app.use(cors({
   credentials: true,
 }));
 
+// Your CORS configuration for handling OPTIONS requests
+app.options('*', cors());
+app.options('*', function(req, res) {
+  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', true);
+  res.send(200);
+});
+
+
 // Middleware function for verifying JWT token
 function verifyToken(req, res, next) {
   const token = req.headers.authorization;
@@ -38,7 +48,7 @@ function verifyToken(req, res, next) {
 
 
 
-app.use(verifyToken);
+//app.use(verifyToken);
 
 
 // Endpoint for user signup
@@ -171,7 +181,7 @@ app.delete('/favorites/:artworkid', async (req, res) => {
 
 
 
-//app.use(verifyToken); this is where it worked before deployment 
+app.use(verifyToken); //this is where it worked before deployment 
 
 
 
