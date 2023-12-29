@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://visualartexplorer.netlify.app', // Replace with your frontend URL
+  origin: 'https://658e48378522cb6359701508--visualartexplorer.netlify.app', // Replace with your frontend URL
   methods: ['GET', 'POST', 'DELETE'],
   credentials: true,
 }));
