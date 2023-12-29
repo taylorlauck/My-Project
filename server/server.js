@@ -38,7 +38,7 @@ function verifyToken(req, res, next) {
 
 
 
-
+app.use(verifyToken);
 
 
 // Endpoint for user signup
@@ -171,7 +171,7 @@ app.delete('/favorites/:artworkid', async (req, res) => {
 
 
 
-app.use(verifyToken);
+//app.use(verifyToken); this is where it worked before deployment 
 
 
 
