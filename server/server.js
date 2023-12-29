@@ -3,11 +3,15 @@ const express = require('express');
 const cors = require("cors");
 const bcrypt = require('bcrypt');
 const pool = require("./database");
-const PORT = process.env.PORT || 4000;
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 
+
 const app = express();
+
+const DEFAULT_PORT = 4000;
+const PORT = process.env.PORT || DEFAULT_PORT;
+
 
 app.use(express.json());
 
@@ -243,4 +247,7 @@ app.get("/protectedEndpoint", (req, res) => {
 
 
 module.exports = app;
-app.listen(PORT, () => console.log("Server running on localhost:4000"));
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
