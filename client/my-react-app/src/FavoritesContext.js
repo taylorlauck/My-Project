@@ -11,7 +11,7 @@ export const FavoritesProvider = ({ children }) => {
 
   const fetchFavorites = async () => {
     try {
-      const response = await axios.get('http://art-visual-explorer.onrender.com/favorites', {
+      const response = await axios.get('https://art-visual-explorer.onrender.com/favorites', {
         headers: {
           Authorization: `Bearer ${window.localStorage.getItem('token')}`,
         },
@@ -27,7 +27,7 @@ export const FavoritesProvider = ({ children }) => {
     try {
       setFavorites([...favorites, artPiece, ]);
       await axios.post(
-        'http://art-visual-explorer.onrender.com/favorite',
+        'https://art-visual-explorer.onrender.com/favorite',
         { artworkId: artPiece.id,  slug: artPiece.slug, }, // Include artworkId, slug, and thumbnailUrl (image)
         {
           headers: {
@@ -44,7 +44,7 @@ export const FavoritesProvider = ({ children }) => {
 
   const removeFromFavorites = async (artworkid) => {
     try {
-      await axios.delete(`http://art-visual-explorer.onrender.com/favorites/${artworkid}`, {
+      await axios.delete(`https://art-visual-explorer.onrender.com/favorites/${artworkid}`, {
       headers: {
           Authorization: `Bearer ${window.localStorage.getItem('token')}`,
         },
