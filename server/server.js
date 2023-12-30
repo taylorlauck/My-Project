@@ -16,7 +16,7 @@ const PORT = process.env.PORT || DEFAULT_PORT;
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://658e48378522cb6359701508--visualartexplorer.netlify.app', // Replace with your frontend URL
+  origin: 'https://658f78613f298217ba3882cf--visualartexplorer.netlify.app', // Replace with your frontend URL
   methods: ['GET', 'POST', 'DELETE'],
   credentials: true,
 }));
