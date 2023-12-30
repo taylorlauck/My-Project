@@ -205,7 +205,7 @@ app.post('/favorite', async (req, res) => {
     const { artworkId, slug } = req.body;
     const username = decodedToken.username;
 
-    const insertQuery = "INSERT INTO favorites (username, artworkId, slug) VALUES ($1, $2, $3)";
+    const insertQuery = "INSERT INTO favorites (username, artworkid, slug) VALUES ($1, $2, $3)";
     await pool.query(insertQuery, [username, artworkId, slug]);
 
     res.status(200).json({ success: true });
