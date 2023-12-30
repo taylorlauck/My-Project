@@ -12,7 +12,7 @@ const FavoritesPage = () => {
   useEffect(() => {
     fetchFavorites(); // Fetch favorites when the component mounts
   
-  }, [fetchFavorites]); // Empty dependency array to execute once
+  }, []); // Empty dependency array to execute once
 
   return (
     <div>
