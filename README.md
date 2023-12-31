@@ -43,7 +43,7 @@ Visual Art Explorer is designed to provide users with a platform to discover and
 
 ## Usage
 
-1. Open the application in your browser.
+1. Open the [Visual Art Explorer website](https://visualartexplorer.netlify.app/) in your browser.
 2. Browse through the art pieces displayed.
 3. Click on an artwork to view more details.
 4. Create an account to save your favorite artworks.
@@ -56,7 +56,6 @@ Contributions are welcome! To contribute, follow these steps:
 - Make changes in your forked repository.
 - Submit a pull request detailing your changes.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
+
 
